@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Accordion from "./Accordion";
 import { ArrowLeft, Plus } from "lucide-react";
+import Image from "next/image";
 const faqItems = [
   {
     q: "نحوه تماس با ما",
@@ -29,8 +30,10 @@ const Footer = () => {
     <div className="px-2 lg:px-4 my-20 text-center py-20 bg-black">
       <div className="w-full h-fit grid grid-cols-1 lg:grid-cols-4 gap-20 gap-y-20 lg:gap-y-20">
         <div className="w-full flex flex-col items-center justify-center gap-2 ">
-          <Link href={'/#home'} className="text-5xl font-bold w-full tracking-wider">LOGO</Link>
-          <span className="text-center w-full">مزون ماه رخ</span>
+          <Link href={"/#home"} className="rounded-xl overflow-hidden">
+            <Image src={"/logo.png"} width={150} height={150} alt="logo" />
+          </Link>
+          <span className="text-center w-full tracking-widest font-bold">MAHROKH MEZON</span>
         </div>
         <Accordion acc={faqItems} />
         <div className="flex flex-col items-start justify-start gap-4 w-full h-fit">
@@ -60,10 +63,7 @@ const Footer = () => {
           >
             صفحه اصلی <ArrowLeft size={16} />
           </Link>
-          <Link
-            className="flex w-full items-center justify-between"
-            href={"/"}
-          >
+          <Link className="flex w-full items-center justify-between" href={"/"}>
             صفحه محصولات <ArrowLeft size={16} />
           </Link>
         </div>

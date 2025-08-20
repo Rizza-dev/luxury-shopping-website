@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "MAHROX MEZON",
   description: "Luxury Fashion Store",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

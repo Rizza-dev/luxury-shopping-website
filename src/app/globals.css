@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;     /* برای IE و Edge */
+  scrollbar-width: none;        /* برای Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;                /* برای Chrome و Safari */
+}
